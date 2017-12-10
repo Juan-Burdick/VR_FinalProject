@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Puzzle1Controller : MonoBehaviour {
 
-	private GameObject mWall;
+	private GameObject mVisibleWall;
+	private GameObject mInvisibleWalls;
 
 	// Use this for initialization
 	void Start () {
-		mWall = transform.Find("Puzzle1_Wall").gameObject;
+		mVisibleWall = transform.Find("Puzzle1_Wall").gameObject;
+		mInvisibleWalls = transform.Find("Puzzle1_TeleportBoundaries").gameObject;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (mWall.transform.position.y <= -1000) {
-			// Delete invisible walls
+		if (mVisibleWall.transform.position.y <= -1000) {
+			Destroy(mInvisibleWalls);
 		}
 	}
 }

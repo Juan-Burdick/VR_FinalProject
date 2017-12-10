@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetController : MonoBehaviour {
+public class InvisibleWallController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-
-	void onCollisionEnter(Collision collision) {
-		GetComponent<Renderer> ().material.color = Color.red;
+		GetComponent<Renderer>().enabled = false;
 	}
 	
 	// Update is called once per frame
