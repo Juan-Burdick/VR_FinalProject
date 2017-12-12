@@ -8,64 +8,50 @@ public class Puzzle2_Controller : MonoBehaviour {
 	public static event onSolved onPuzzleSolved;
 	public float tolerance = .1f;
 
-	private GameObject mSlots;
-	private GameObject mCubes;
 	private GameObject mTable;
 	private GameObject indicatorSetter;
 	#region SlotsDeclaration
 		#region CherrySlotDeclaration
-			private GameObject mLargeCherrySlot;
 			private GameObject mMediumCherrySlot;
 			private GameObject mSmallCherrySlot;
 		#endregion
 		#region WalnutSlotDeclaration
-			private GameObject mLargeWalnutSlot;
 			private GameObject mMediumWalnutSlot;
 			private GameObject mSmallWalnutSlot;
 		#endregion
 		#region OakSlotDeclaration
-			private GameObject mLargeOakSlot;
 			private GameObject mMediumOakSlot;
 			private GameObject mSmallOakSlot;
 		#endregion
 	#endregion
 	#region CubesDeclaration
 		#region CherryCubeDeclaration
-			private GameObject mLargeCherryCube;
 			private GameObject mMediumCherryCube;
 			private GameObject mSmallCherryCube;
 		#endregion
 		#region WalnutCubeDeclaration
-			private GameObject mLargeWalnutCube;
 			private GameObject mMediumWalnutCube;
 			private GameObject mSmallWalnutCube;
 		#endregion
 		#region OakCubeDeclaration
-			private GameObject mLargeOakCube;
 			private GameObject mMediumOakCube;
 			private GameObject mSmallOakCube;
 		#endregion
 	#endregion
 	#region IndicatorDeclaration
 		#region CherryIndicators
-			private GameObject CLI1;
-			private GameObject CLI2;
 			private GameObject CMI1;
 			private GameObject CMI2;
 			private GameObject CSI1;
 			private GameObject CSI2;
 		#endregion
 		#region WalnutIndicators
-			private GameObject WLI1;
-			private GameObject WLI2;
 			private GameObject WMI1;
 			private GameObject WMI2;
 			private GameObject WSI1;
 			private GameObject WSI2;
 		#endregion
 		#region OakIndicators
-			private GameObject OLI1;
-			private GameObject OLI2;
 			private GameObject OMI1;
 			private GameObject OMI2;
 			private GameObject OSI1;
@@ -75,48 +61,37 @@ public class Puzzle2_Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		mSlots = transform.Find("Slots").gameObject;
-		mCubes = transform.Find("Cubes").gameObject;
 		mTable = transform.Find("Puzzle2_Table").gameObject;
 		#region SetSlots
 			#region SetCherrySlots
-				mLargeCherrySlot = mSlots.transform.Find("Cherry_Large_Slot").gameObject;
-				mMediumCherrySlot = mSlots.transform.Find("Cherry_Medium_Slot").gameObject;
-				mSmallCherrySlot = mSlots.transform.Find("Cherry_Small_Slot").gameObject;
+				mMediumCherrySlot = transform.Find("Cherry_Medium_Slot").gameObject;
+				mSmallCherrySlot = transform.Find("Cherry_Small_Slot").gameObject;
 	    	#endregion
 			#region SetWalnutSlots
-				mLargeWalnutSlot = mSlots.transform.Find("Walnut_Large_Slot").gameObject;
-	    		mMediumWalnutSlot = mSlots.transform.Find("Walnut_Medium_Slot").gameObject;
-	    		mSmallWalnutSlot = mSlots.transform.Find("Walnut_Small_Slot").gameObject;
+				mMediumWalnutSlot = transform.Find("Walnut_Medium_Slot").gameObject;
+	    		mSmallWalnutSlot = transform.Find("Walnut_Small_Slot").gameObject;
 	    	#endregion
 			#region SetOakSlots
-				mLargeOakSlot = mSlots.transform.Find("Oak_Large_Slot").gameObject;
-				mMediumOakSlot = mSlots.transform.Find("Oak_Medium_Slot").gameObject;
-				mSmallOakSlot = mSlots.transform.Find("Oak_Small_Slot").gameObject;
+				mMediumOakSlot = transform.Find("Oak_Medium_Slot").gameObject;
+				mSmallOakSlot = transform.Find("Oak_Small_Slot").gameObject;
 	    	#endregion
 		#endregion
 		#region SetCubes
 			#region SetCherryCubes
-				mLargeCherryCube = mSlots.transform.Find("Cherry_Large_Cube").gameObject;
-	    		mMediumCherryCube = mSlots.transform.Find("Cherry_Medium_Cube").gameObject;
-	    		mSmallCherryCube = mSlots.transform.Find("Cherry_Small_Cube").gameObject;
+				mMediumCherryCube = transform.Find("Cherry_Medium_Cube").gameObject;
+	    		mSmallCherryCube = transform.Find("Cherry_Small_Cube").gameObject;
 	    	#endregion
 			#region SetWalnutCubes
-				mLargeWalnutCube = mSlots.transform.Find("Walnut_Large_Cube").gameObject;
-				mMediumWalnutCube = mSlots.transform.Find("Walnut_Medium_Cube").gameObject;
-	    		mSmallWalnutCube = mSlots.transform.Find("Walnut_Small_Cube").gameObject;
+				mMediumWalnutCube = transform.Find("Walnut_Medium_Cube").gameObject;
+	    		mSmallWalnutCube = transform.Find("Walnut_Small_Cube").gameObject;
 	    	#endregion
 			#region SetOakCubes
-				mLargeOakCube = mSlots.transform.Find("Oak_Large_Cube").gameObject;
-	    		mMediumOakCube = mSlots.transform.Find("Oak_Medium_Cube").gameObject;
-	    		mSmallOakCube = mSlots.transform.Find("Oak_Small_Cube").gameObject;
+				mMediumOakCube = transform.Find("Oak_Medium_Cube").gameObject;
+	    		mSmallOakCube = transform.Find("Oak_Small_Cube").gameObject;
 			#endregion
 		#endregion
 		#region SetIndicators
 			#region SetCherryIndicators
-				indicatorSetter = transform.Find("Cherry_LargeIndicator").gameObject;
-				CLI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
-				CLI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
 				indicatorSetter = transform.Find("Cherry_MediumIndicator").gameObject;
 				CMI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
 				CMI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
@@ -125,9 +100,6 @@ public class Puzzle2_Controller : MonoBehaviour {
 				CSI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
 			#endregion
 			#region SetWalnutIndicators
-				indicatorSetter = transform.Find("Walnut_LargeIndicator").gameObject;
-				WLI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
-				WLI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
 				indicatorSetter = transform.Find("Walnut_MediumIndicator").gameObject;
 				WMI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
 				WMI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
@@ -136,9 +108,6 @@ public class Puzzle2_Controller : MonoBehaviour {
 				WSI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
 			#endregion
 			#region SetOakIndicators
-				indicatorSetter = transform.Find("Oak_LargeIndicator").gameObject;
-				OLI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
-				OLI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
 				indicatorSetter = transform.Find("Oak_MediumIndicator").gameObject;
 				OMI1 = indicatorSetter.transform.Find("Red_Green_Indicator1").gameObject;
 				OMI2 = indicatorSetter.transform.Find("Red_Green_Indicator2").gameObject;
@@ -160,28 +129,9 @@ public class Puzzle2_Controller : MonoBehaviour {
 	#region isCherrySolved
 		// Return true if cherry is solved
 		bool isCherrySolved() {
-			if (isCherryLargeSolved() 
-		 	 && isCherryMediumSolved() 
+			if (isCherryMediumSolved() 
 		 	 && isCherrySmallSolved()) { return true; }
 			else { return false; }
-		}
-
-		// Return true if cherry large is solved
-		bool isCherryLargeSolved() {
-			Vector3 CLS_Pos = mLargeCherrySlot.transform.position;
-			Vector3 CLC_Pos = mLargeCherryCube.transform.position;
-			if (Mathf.Abs (CLS_Pos.x - CLC_Pos.x) < tolerance
-		 	 && Mathf.Abs (CLS_Pos.y - CLC_Pos.y) < tolerance
-		 	 && Mathf.Abs (CLS_Pos.z - CLC_Pos.z) < tolerance) {
-				CLI1.GetComponent<Renderer>().material.color = Color.green;
-				CLI2.GetComponent<Renderer>().material.color = Color.green;
-				return true;
-			}
-			else {
-				CLI1.GetComponent<Renderer>().material.color = Color.red;
-				CLI2.GetComponent<Renderer>().material.color = Color.red;
-				return false;
-			}
 		}
 
 		// Return true if cherry medium is solved
@@ -223,28 +173,9 @@ public class Puzzle2_Controller : MonoBehaviour {
 	#region isWalnutSolved
 		// Return true if walnut is solved
 		bool isWalnutSolved() {
-			if (isWalnutLargeSolved()
-		 	 && isWalnutMediumSolved()
+			if (isWalnutMediumSolved()
 			 && isWalnutSmallSolved()) { return true; }
 			else { return false; }
-		}
-
-		// Return true if walnut large is solved
-		bool isWalnutLargeSolved() {
-			Vector3 WLS_Pos = mLargeWalnutSlot.transform.position;
-			Vector3 WLC_Pos = mLargeWalnutCube.transform.position;
-			if (Mathf.Abs (WLS_Pos.x - WLC_Pos.x) < tolerance
-		 	 && Mathf.Abs (WLS_Pos.y - WLC_Pos.y) < tolerance
-		 	 && Mathf.Abs (WLS_Pos.z - WLC_Pos.z) < tolerance) {
-				WLI1.GetComponent<Renderer>().material.color = Color.green;
-				WLI2.GetComponent<Renderer>().material.color = Color.green;
-				return true;
-			}
-			else {
-				WLI1.GetComponent<Renderer>().material.color = Color.red;
-				WLI2.GetComponent<Renderer>().material.color = Color.red;
-				return false;
-			}
 		}
 
 		// Return true if walnut medium is solved
@@ -286,28 +217,9 @@ public class Puzzle2_Controller : MonoBehaviour {
 	#region isOakSolved
 		// return true if oak is solved
 		bool isOakSolved() {
-			if (isOakLargeSolved()
-			 && isOakMediumSolved()
+			if (isOakMediumSolved()
 			 && isOakSmallSolved()) { return true; }
 			else { return false; }
-		}
-
-		// Return true if oak large is solved
-		bool isOakLargeSolved() {
-			Vector3 OLS_Pos = mLargeOakSlot.transform.position;
-			Vector3 OLC_Pos = mLargeOakCube.transform.position;
-			if (Mathf.Abs (OLS_Pos.x - OLC_Pos.x) < tolerance
-			 && Mathf.Abs (OLS_Pos.y - OLC_Pos.y) < tolerance
-			 && Mathf.Abs (OLS_Pos.z - OLC_Pos.z) < tolerance) {
-				OLI1.GetComponent<Renderer>().material.color = Color.green;
-				OLI2.GetComponent<Renderer>().material.color = Color.green;
-				return true;
-			}
-			else {
-				OLI1.GetComponent<Renderer>().material.color = Color.red;
-				OLI2.GetComponent<Renderer>().material.color = Color.red;
-				return false;
-			}
 		}
 
 		// Return true if oak medium is solved

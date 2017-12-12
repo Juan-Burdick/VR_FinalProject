@@ -6,7 +6,7 @@ public class TargetController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
 	}
 
 	void onCollisionEnter(Collision collision) {
