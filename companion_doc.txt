@@ -1,0 +1,11 @@
+Juan Burdick
+2017_12_14
+Virtual Reality
+Dr. Summerscales
+
+
+
+All uncited work done by Juan Burdick using Unity 2017.1 and 2017.2
+
+Assets by other authors used:
+ArrowSpawner asset from VRTK Examples.
