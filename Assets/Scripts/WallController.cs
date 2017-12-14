@@ -16,6 +16,7 @@ public class WallController : MonoBehaviour {
 	private Vector3 mSphere2;
 	private Vector3 mSphere3;
 	private Vector3 mSphere4;
+	private bool doCheck = true;
 	
 	// Use this for initialization
 	void Start () {
@@ -24,54 +25,67 @@ public class WallController : MonoBehaviour {
 		mBall2 = transform.Find("GrabSphere2").gameObject;
 		mBall3 = transform.Find("GrabSphere3").gameObject;
 		mBall4 = transform.Find("GrabSphere4").gameObject;
-		mTargetPos = mTarget.transform.position;
-		mSphere1 = mBall1.transform.position;
-		mSphere2 = mBall2.transform.position;
-		mSphere3 = mBall3.transform.position;
-		mSphere4 = mBall4.transform.position;
 	}
 
-	// Check if target was hit, turn blue if it was
+	// Check if any ball hit targets
 	bool wasHit() {
-		if (wasHitX() && wasHitY() && wasHitZ()) { return true; }
+		if (did1hit() || did2hit() || did3hit() || did4hit()) { return true; }
 		else { return false; }
 	}
 
-	// Check if x is within tolerance
-	bool wasHitX() {
-		if ((Mathf.Abs (mTargetPos.x - mSphere1.x) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.x - mSphere2.x) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.x - mSphere3.x) < tolerance)
-		 || (Mathf.Abs (mTargetPos.x - mSphere4.x) < tolerance)) { return true; }
-		else { return false; }
-	}
+	#region SphereHits
+		// check if sphere 1 hit
+		bool did1hit() {
+			Vector3 wall = mTarget.transform.position;
+			Vector3 ball = mBall1.transform.position;
+			if ((Mathf.Abs (wall.x - ball.x) < tolerance)
+	 	 	 && (Mathf.Abs (wall.y - ball.y) < tolerance)
+	 		 && (Mathf.Abs (wall.z - ball.z) < tolerance)) { return true; }
+			else { return false; }
+		}
 
-	// Check if y is within tolerance
-	bool wasHitY() {
-		if ((Mathf.Abs (mTargetPos.y - mSphere1.y) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.y - mSphere2.y) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.y - mSphere3.y) < tolerance)
-		 || (Mathf.Abs (mTargetPos.y - mSphere4.y) < tolerance)) { return true; }
-		else { return false; }
-	}
+		// check if sphere 2 hit
+		bool did2hit() {
+			Vector3 wall = mTarget.transform.position;
+			Vector3 ball = mBall2.transform.position;
+			if ((Mathf.Abs (wall.x - ball.x) < tolerance)
+	 		 && (Mathf.Abs (wall.y - ball.y) < tolerance)
+	 		 && (Mathf.Abs (wall.z - ball.z) < tolerance)) { return true; }
+			else { return false; }
+		}
 
-	// Check if z is within tolerance
-	bool wasHitZ() {
-		if ((Mathf.Abs (mTargetPos.z - mSphere1.z) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.z - mSphere2.z) < tolerance)
-	 	 || (Mathf.Abs (mTargetPos.z - mSphere3.z) < tolerance)
-		 || (Mathf.Abs (mTargetPos.z - mSphere4.z) < tolerance)) { return true; }
-		else { return false; }
-	}
-	
+		// check if sphere 3 hit
+		bool did3hit() {
+			Vector3 wall = mTarget.transform.position;
+			Vector3 ball = mBall3.transform.position;
+			if ((Mathf.Abs (wall.x - ball.x) < tolerance)
+	 		 && (Mathf.Abs (wall.y - ball.y) < tolerance)
+	 		 && (Mathf.Abs (wall.z - ball.z) < tolerance)) { return true; }
+			else { return false; }
+		}
+
+		// check if sphere 4 hit
+		bool did4hit() {
+			Vector3 wall = mTarget.transform.position;
+			Vector3 ball = mBall4.transform.position;
+			if ((Mathf.Abs (wall.x - ball.x) < tolerance)
+	 		 && (Mathf.Abs (wall.y - ball.y) < tolerance)
+	 		 && (Mathf.Abs (wall.z - ball.z) < tolerance)) { return true; }
+			else { return false; }
+		}
+	#endregion
+
 	// Update is called once per frame
 	void Update () {
-		if (wasHit()) {
-			transform.Translate(0, -1100, 0);
-			Destroy(mBall1);
-			Destroy(mBall2);
-			Destroy(mBall3);
-			Destroy(mBall4);
+		if (doCheck) {
+			if (wasHit()) {
+				transform.Translate(0, -1100, 0);
+				Destroy(mBall1);
+				Destroy(mBall2);
+				Destroy(mBall3);
+				Destroy(mBall4);
+				doCheck = false;
+			}
 		}
 	}
 }

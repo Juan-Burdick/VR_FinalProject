@@ -1441,7 +1441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 161895689}
   - component: {fileID: 161895692}
-  - component: {fileID: 161895691}
   - component: {fileID: 161895690}
   m_Layer: 0
   m_Name: MountingBoard
@@ -1499,19 +1498,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &161895691
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65702284461443084, guid: c958f868e358d4c4d8aded87a42be577,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 161895688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &161895692
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1627,7 +1613,6 @@ GameObject:
   - component: {fileID: 171916523}
   - component: {fileID: 171916522}
   - component: {fileID: 171916521}
-  - component: {fileID: 171916520}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth7
   m_TagString: InvisibleWall
@@ -1648,17 +1633,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &171916520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 171916518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &171916521
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2104,7 +2078,6 @@ GameObject:
   - component: {fileID: 202058534}
   - component: {fileID: 202058533}
   - component: {fileID: 202058532}
-  - component: {fileID: 202058531}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth4
   m_TagString: InvisibleWall
@@ -2125,17 +2098,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &202058531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 202058529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &202058532
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5694,6 +5656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tolerance: 0.3
 --- !u!1 &573912448
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,7 +5764,6 @@ GameObject:
   - component: {fileID: 574696071}
   - component: {fileID: 574696070}
   - component: {fileID: 574696069}
-  - component: {fileID: 574696068}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth6
   m_TagString: InvisibleWall
@@ -5822,17 +5784,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &574696068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 574696066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &574696069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13062,7 +13013,6 @@ GameObject:
   - component: {fileID: 1419697675}
   - component: {fileID: 1419697674}
   - component: {fileID: 1419697673}
-  - component: {fileID: 1419697672}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth2
   m_TagString: InvisibleWall
@@ -13083,17 +13033,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &1419697672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1419697670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1419697673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15298,7 +15237,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1670972052}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -15368,7 +15307,6 @@ GameObject:
   - component: {fileID: 1701887971}
   - component: {fileID: 1701887970}
   - component: {fileID: 1701887969}
-  - component: {fileID: 1701887968}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth1
   m_TagString: InvisibleWall
@@ -15389,17 +15327,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &1701887968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1701887966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1701887969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18648,7 +18575,6 @@ GameObject:
   - component: {fileID: 2000215284}
   - component: {fileID: 2000215283}
   - component: {fileID: 2000215282}
-  - component: {fileID: 2000215281}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth5
   m_TagString: InvisibleWall
@@ -18669,17 +18595,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &2000215281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2000215279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2000215282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19542,7 +19457,6 @@ GameObject:
   - component: {fileID: 2141253199}
   - component: {fileID: 2141253198}
   - component: {fileID: 2141253197}
-  - component: {fileID: 2141253196}
   m_Layer: 0
   m_Name: Puzzle1_Wall_Depth3
   m_TagString: InvisibleWall
@@ -19563,17 +19477,6 @@ Transform:
   m_Father: {fileID: 566911974}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -130, z: 90}
---- !u!114 &2141253196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2141253194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa41a140c4a664f44bcbf075a8f027cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2141253197
 MeshRenderer:
   m_ObjectHideFlags: 0
